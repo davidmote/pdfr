@@ -1,0 +1,10 @@
+parser: babel-eslint
+extends: airbnb-base
+env:
+  node: true
+  es6: true
+plugins:
+  - import
+  - node
+rules:
+  no-console: off   # recommended for node.js applications
