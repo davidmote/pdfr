@@ -8,5 +8,3 @@ env:
 plugins:
   - import
   - node
-rules:
-  no-console: off   # recommended for node.js applications
