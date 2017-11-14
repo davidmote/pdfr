@@ -2,9 +2,11 @@
   "clearMocks": true,
   "collectCoverage": true,
   "collectCoverageFrom": [
-    "lib/**/*.{js,jsx}",
-    "bin/**/*.{js,jsx}",
-    "!**/node_modules/**"
+    "**/*.{js,jsx}",
+    "!**/index.{js,jsx}",
+    "!**/node_modules/**",
+    "!**/build/**",
+    "!**/dist/**"
   ],
   "coverageDirectory": "./build/coverage",
   "mapCoverage": true,

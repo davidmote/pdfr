@@ -8,13 +8,13 @@
     "lib": "lib"
   },
   "bin": {
-    "pdfr": "bin/index.js"
+    "pdfr": "bin/cli.js"
   },
   "scripts": {
     "docs": "rimraf ./build/docs && esdoc",
     "docs:watch": "nodemon -L --watch src --exec 'rimraf ./build/docs && esdoc'",
-    "tests": "jest --config .jestrc.json --coverage",
-    "tests:watch": "jest --config .jestrc.json --coverage --watch"
+    "tests": "jest --config .jestrc.json",
+    "tests:watch": "jest --config .jestrc.json --watch"
   },
   "repository": {
     "type": "git",
@@ -41,7 +41,7 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^5.2.1",
-    "jest": "^21.2.1",
+    "jest": "^20.0.0",
     "nodemon": "^1.12.1",
     "rimraf": "^2.6.2"
   }

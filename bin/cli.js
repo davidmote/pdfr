@@ -18,7 +18,7 @@ import { templateToPDF } from '../lib/';
  *
  * @param {string[]} argv - command line arguments, usually from 'process.argv'
  */
-function help(argv) {
+export function help(argv) {
   const appName = path.basename(argv[1]);
   const message = [
     'Generates a PDF from an input HTML template with optional parameters.',
@@ -40,7 +40,7 @@ function help(argv) {
  *
  * @param {string[]} argv - command line arguments, usually from 'process.argv'
  */
-function main(argv) {
+export default function main(argv) {
   const userParameters = minimist(argv.slice(2));
 
   if (!userParameters || userParameters.h || userParameters.help) {
@@ -51,14 +51,16 @@ function main(argv) {
     _: [sourcePath, destinationPath],
     c: pdfSettingsPath = null,
     p: contextPath = null,
-    v: debug,
+    v: verbose,
   } = userParameters;
 
-  if (debug) {
+  if (verbose) {
     console.debug = (...args) => console.log.apply(null, args);
   }
 
   templateToPDF(sourcePath, destinationPath, contextPath, pdfSettingsPath);
 }
 
-main(process.argv);
+if (require.main === module) {
+  main(process.argv);
+}
