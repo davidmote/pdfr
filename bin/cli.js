@@ -1,4 +1,7 @@
-#!/usr/bin/env babel-node --
+#!/usr/bin/env sh
+':' //; exec "$(yarn bin)/babel-node" -- "$0" "$@"
+// Execute as shell script initally to find local babel-node executable.
+// See: https://unix.stackexchange.com/a/65295
 
 /**
  * Command-line interface to PDFr functions.
