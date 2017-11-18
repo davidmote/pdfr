@@ -6,11 +6,11 @@ A tool that generates a PDF from an re-usable HTML template
 ## Background
 
 Several project require PDF report generation with included images and graphs,
-such as application validation/verification via automaticed testing,
-templated reports, customized documents, etc. Therefore the need for a serivce
+such as application validation/verification via automated testing,
+templated reports, customized documents, etc. Therefore the need for a service
 to automate this workflow is desired.
 
-The component will take a template, render with parametrs, apply a set of style
+The component will take a template, render with parameters, apply a set of style
 sheets, include images, and output a PDF file.
 
 
@@ -65,4 +65,3 @@ https://github.com/marcbachmann/node-html-pdf#options
 
 Remember to run `yarn link` so that the command line script is properly
 installed for testing during development
-

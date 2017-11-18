@@ -8,3 +8,12 @@ env:
 plugins:
   - import
   - node
+
+overrides:
+  files:
+    - '**/*.spec.js'
+    - '**/*.spec.jsx'
+
+  rules:
+    import/first: 0
+    import/no-extraneous-dependencies: ["error", {"devDependencies": true}]
