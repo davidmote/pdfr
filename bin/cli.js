@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
-':' //; exec "$(yarn bin)/babel-node" -- "$0" "$@"
+
+':';
+
+// ; exec "$(yarn bin)/babel-node" -- "$0" "$@"
 // Execute as shell script initally to find local babel-node executable.
 // See: https://unix.stackexchange.com/a/65295
 
@@ -14,7 +17,7 @@ import path from 'path';
 
 import minimist from 'minimist';
 
-import { log, templateToPDF } from '../lib/';
+import { log, templateToPDF } from '../src/';
 
 /**
  * Main driver function. Prints help() if no paramters or help specified.

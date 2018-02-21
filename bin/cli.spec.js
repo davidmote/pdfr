@@ -1,7 +1,7 @@
 jest.mock('../lib');
 
 import main from './cli';
-import * as lib from '../lib';
+import * as lib from '../src';
 
 test('Help is called when specified via -h', () => {
   main(['node', '/path/to/pdfr', '-h']);
